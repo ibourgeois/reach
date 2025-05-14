@@ -4,10 +4,22 @@ Reach is a Laravel package that provides a RESTful API to manage contacts and co
 
 ## Installation
 
-To install the package, you can use Composer. Run the following command in your terminal:
+To install the package, you can use Composer. Run the following commands in your terminal:
 
 ```bash
 composer require ibourgeois/reach
+```
+
+Then, you can run the database migrations to create the necessary tables:
+
+```bash
+php artisan migrate
+```
+
+> You can also publish the migrations if you want to customize them:
+
+```bash
+php artisan vendor:publish --provider="iBourgeois\Reach\Providers\ReachServiceProvider" --tag="migrations"
 ```
 
 ## License
