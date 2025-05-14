@@ -14,12 +14,22 @@
             "iBourgeois\\Reach\\": "src/"
         }
     },
+    "require": {
+        "illuminate/support": "^12"
+    },
     "require-dev": {
         "orchestra/testbench": "^10.3"
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "iBourgeois\\Reach\\Providers\\ReachServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
