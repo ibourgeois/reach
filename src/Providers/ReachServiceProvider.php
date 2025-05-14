@@ -24,7 +24,7 @@ class ReachServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->publishMigrations();
-        $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
+        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
     }
 
     /** 
@@ -37,7 +37,7 @@ class ReachServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             if (! class_exists('CreateListsTable')) {
                 $this->publishes([
-                    __DIR__ . '/../database/migrations/2025_05_14_062102_create_lists_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_lists_table.php'),
+                    __DIR__ . '/../../database/migrations/2025_05_14_062102_create_lists_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_lists_table.php'),
                 ], 'migrations');
             }
         }
