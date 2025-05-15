@@ -40,6 +40,11 @@ class ReachServiceProvider extends ServiceProvider
                     __DIR__ . '/../../database/migrations/2025_05_14_062102_create_lists_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_lists_table.php'),
                 ], 'migrations');
             }
+            if (! class_exists('CreateContactsTable')) {
+                $this->publishes([
+                    __DIR__ . '/../../database/migrations/2025_05_14_132500_create_contacts_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_contacts_table.php'),
+                ], 'migrations');
+            }
         }
     }
 }
